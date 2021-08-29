@@ -15,7 +15,7 @@ After successful executing the program. A message box will pop up.<br>
 <br>
 
 displaying timer icon
-<img src="outputs/timer.png">
+<img src="outputs/timer.png" width=300 height=300>
 <br>
 
 

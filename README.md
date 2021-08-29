@@ -14,8 +14,8 @@ After successful executing the program. A message box will pop up.<br>
 <img src="outputs/output-usage.png" width=560 height=340>
 <br>
 
-displaying icon
-<img src="outputs/timer.icns">
+displaying timer icon
+<img src="outputs/timer.png">
 <br>
 
 

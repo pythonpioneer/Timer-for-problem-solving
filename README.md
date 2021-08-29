@@ -15,7 +15,7 @@ After successful executing the program. A message box will pop up.<br>
 <br>
 
 displaying icon
-<img src="timer.icns">
+<img src="Timer-for-problem-solving/timer.icns">
 <br>
 
 

@@ -160,7 +160,7 @@ if __name__ == '__main__':
     submit_btn.place(x=5, y=220)
 
     # close all activity
-    close_btn = Button(root, text="Pause", bd=5, command=pause_timer, padx=16.5)
+    close_btn = Button(root, text="Pause", bd=5, command=pause_timer, padx=17.5)
     close_btn.place(x=5, y=250)
 
     # reset timer

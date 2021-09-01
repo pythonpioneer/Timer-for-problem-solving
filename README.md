@@ -3,7 +3,7 @@ So, when I practice competitive programming. sometimes a question takes a lot of
 <br>
 
 This is output of Timer.<br>
-<img src="outputs/output.png" width=100 height=220>
+<img src="outputs/output.png" width=90 height=220>
 <br>
 
 Here is the usage of given program.<br>

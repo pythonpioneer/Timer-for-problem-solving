@@ -4,7 +4,8 @@ from tkinter import *
 from tkinter import messagebox
 global running
 global is_close
-global we_close_it
+global we_pause_it
+global given_time
 import pyttsx3
 is_close = True
 
@@ -15,8 +16,9 @@ if __name__ == '__main__':
 
     # function overriding of [x] button
     def close_ex():
-        global is_close
+        global is_close, given_time
         is_close = False
+        given_time = -4
         root.destroy()
 
     # overriding [x] close button
@@ -39,8 +41,8 @@ if __name__ == '__main__':
 
     # other basics stuff
     root.configure(background="black")
-    root.title('Problem Solving Timer')
-    root.maxsize(app_width, app_height)
+    root.title('Problem Solving StopWatch')
+    root.maxsize(300, 320)
     root.minsize(app_width, app_height)
 
     # variables for time
@@ -85,10 +87,11 @@ if __name__ == '__main__':
         global running
         running = True
 
-        global we_close_it
-        we_close_it = True
+        global we_pause_it
+        we_pause_it = True
 
         # now calculate given time in seconds
+        global given_time
         given_time = hrs * 3600 + mnt * 60 + sec
 
         try:
@@ -127,12 +130,9 @@ if __name__ == '__main__':
                 except: pass
 
                 # now decrease the values every seconds
-                given_time -= 1
+                if we_pause_it:
+                    given_time -= 1
 
-                # for reset the timer
-                if not we_close_it:
-                    root.destroy()
-                    break
 
                 # if close button pressed then this statement will close everything after running
                 if not running:
@@ -146,9 +146,9 @@ if __name__ == '__main__':
         except: pass
 
     # this method close the window
-    def close_timer():
-        global we_close_it
-        we_close_it = False
+    def pause_timer():
+        global we_pause_it
+        we_pause_it = False
 
     # this method reset the timer
     def reset_timer():
@@ -160,7 +160,7 @@ if __name__ == '__main__':
     submit_btn.place(x=5, y=220)
 
     # close all activity
-    close_btn = Button(root, text="Close", bd=5, command=close_timer, padx=17.5)
+    close_btn = Button(root, text="Pause", bd=5, command=pause_timer, padx=16.5)
     close_btn.place(x=5, y=250)
 
     # reset timer
